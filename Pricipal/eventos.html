@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <link rel="shortcut icon" href="Videos/logo 2.png" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #000; /* Fundo escuro para contraste */
+            color: white;
+            overflow: hidden;
+        }
+        .container {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            height: 100%;
+            overflow: auto;
+        }
+        .video-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        .video-bg video {
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+        .highlight-event {
+            background: rgba(0, 0, 0, 0.7); /* Fundo escuro translúcido */
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .highlight-event h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .highlight-event p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .highlight-event img {
+            width: 100%;
+            border-radius: 10px;
+            max-height: 300px;
+            object-fit: cover;
+        }
+        .past-events {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .past-events h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        .past-events .event {
+            background: rgba(0, 0, 0, 0.7); /* Fundo escuro translúcido */
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 1000px;
+            text-align: center;
+        }
+        .past-events .event img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .event h3 {
+            margin: 10px 0;
+            font-size: 24px;
+        }
+        .event p {
+            font-size: 16px;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+        @media screen and (max-width: 768px) {
+            .highlight-event h2 {
+                font-size: 28px;
+            }
+            .highlight-event p {
+                font-size: 16px;
+            }
+            .past-events h2 {
+                font-size: 24px;
+            }
+            .event h3 {
+                font-size: 20px;
+            }
+            .event p {
+                font-size: 14px;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .highlight-event h2 {
+                font-size: 24px;
+            }
+            .highlight-event p {
+                font-size: 14px;
+            }
+            .past-events h2 {
+                font-size: 20px;
+            }
+            .event h3 {
+                font-size: 18px;
+            }
+            .event p {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="video-bg">
+            <video autoplay muted loop>
+                <source src="Videos/EVENTO.mp4" type="video/mp4">
+                Seu navegador não suporta o vídeo.
+            </video>
+        </div>
+        <div class="highlight-event">
+            <h2>Próximo Evento</h2>
+            <img src="proximo-evento.jpg" alt="Próximo Evento">
+            <p>Data: 25 de Agosto, 2024</p>
+            <p>Descrição breve do próximo evento, incluindo informações sobre o que acontecerá e por que é imperdível.</p>
+        </div>
+        <div class="past-events">
+            <h2>Eventos Passados</h2>
+            <div class="event">
+                <img src="evento-passado1.jpg" alt="Evento Passado 1">
+                <h3>Evento Passado 1</h3>
+                <p>Data: 15 de Julho, 2024</p>
+                <p>Descrição do evento passado, incluindo detalhes sobre o que ocorreu e como foi a participação.</p>
+            </div>
+            <div class="event">
+                <img src="evento-passado2.jpg" alt="Evento Passado 2">
+                <h3>Evento Passado 2</h3>
+                <p>Data: 10 de Junho, 2024</p>
+                <p>Descrição do evento passado, com uma breve recapitulação do evento e seus destaques.</p>
+            </div>
+            <!-- Adicione mais eventos passados conforme necessário -->
+            <a href="Principal.html" class="back-button">Volver al Inicio</a>
+        </div>
+    </div>
+</body>
+</html>
